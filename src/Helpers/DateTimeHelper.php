@@ -1,9 +1,9 @@
 <?php
 
-namespace Om30\ESusToolkit\Helpers;
+namespace OM30\EsusToolkit\Helpers;
 
 use DateTime;
-use Om30\ESusToolkit\Models\AbstractModel;
+use OM30\EsusToolkit\Models\AbstractModel;
 
 /**
  * Classe para concentrar ações referentes a data e hora/tempo

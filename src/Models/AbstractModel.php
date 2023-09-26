@@ -1,13 +1,13 @@
 <?php
 
-namespace Om30\ESusToolkit\Models;
+namespace OM30\EsusToolkit\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Om30\ESusToolkit\Traits\AttributesResourceModel;
+use OM30\EsusToolkit\Traits\AttributesResourceModel;
 
 abstract class AbstractModel extends Model
 {
-    const PRIMARY_KEY = 'id';
-
     use AttributesResourceModel;
+
+    const PRIMARY_KEY = 'id';
 }

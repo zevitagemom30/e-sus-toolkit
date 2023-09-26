@@ -1,8 +1,8 @@
 <?php
 
-namespace Om30\ESusToolkit\Traits;
+namespace OM30\EsusToolkit\Traits;
 
-use Om30\ESusToolkit\Services\AbstractService;
+use OM30\EsusToolkit\Services\AbstractService;
 
 trait AvailabilityWithService
 {
