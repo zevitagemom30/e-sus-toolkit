@@ -1,5 +1,5 @@
 {
-    "name": "om30/e-sus-toolkit",
+    "name": "om30/esus-toolkit",
     "description": "library containing the main tools of the e-sus project",
     "license": "MIT",
     "type": "library",
@@ -9,7 +9,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Om30\\ESusToolkit\\": "src/"
+            "OM30\\EsusToolkit\\": "src/"
         }
     },
     "minimum-stability": "stable"

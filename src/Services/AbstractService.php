@@ -1,8 +1,8 @@
 <?php
 
-namespace Om30\ESusToolkit\Services;
+namespace OM30\EsusToolkit\Services;
 
-use Om30\ESusToolkit\Traits\PreventBehaviorsAsService;
+use OM30\EsusToolkit\Traits\PreventBehaviorsAsService;
 
 abstract class AbstractService
 {

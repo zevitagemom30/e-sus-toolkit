@@ -1,6 +1,6 @@
 <?php
 
-namespace Om30\ESusToolkit\Exceptions;
+namespace OM30\EsusToolkit\Exceptions;
 
 class ValidatorException extends \Exception
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Om30\ESusToolkit\Handlers;
+namespace OM30\EsusToolkit\Handlers;
 
 abstract class AbstractHandler
 {

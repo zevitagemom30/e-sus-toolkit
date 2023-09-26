@@ -1,9 +1,9 @@
 <?php
 
-namespace Om30\ESusToolkit\Strategies;
+namespace OM30\EsusToolkit\Strategies;
 
-use Om30\ESusToolkit\Traits\AvailabilityWithDependencie;
-use Om30\ESusToolkit\Traits\Configurable;
+use OM30\EsusToolkit\Traits\AvailabilityWithDependencie;
+use OM30\EsusToolkit\Traits\Configurable;
 
 abstract class AbstractStrategy
 {

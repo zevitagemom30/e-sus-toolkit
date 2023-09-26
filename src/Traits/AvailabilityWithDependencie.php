@@ -1,6 +1,6 @@
 <?php
 
-namespace Om30\ESusToolkit\Traits;
+namespace OM30\EsusToolkit\Traits;
 
 trait AvailabilityWithDependencie
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Om30\ESusToolkit\Validators;
+namespace OM30\EsusToolkit\Validators;
 
 abstract class AbstractValidator
 {

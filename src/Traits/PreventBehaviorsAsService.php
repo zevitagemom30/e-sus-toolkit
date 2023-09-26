@@ -1,10 +1,10 @@
 <?php
 
-namespace Om30\ESusToolkit\Traits;
+namespace OM30\EsusToolkit\Traits;
 
-use Om30\ESusToolkit\Exceptions\ValidatorException;
-use Om30\ESusToolkit\Handlers\AbstractHandler;
-use Om30\ESusToolkit\Validators\AbstractValidator;
+use OM30\EsusToolkit\Exceptions\ValidatorException;
+use OM30\EsusToolkit\Handlers\AbstractHandler;
+use OM30\ESusToolkit\Validators\AbstractValidator;
 
 trait PreventBehaviorsAsService
 {
