@@ -25,7 +25,7 @@ Logo em seguida, clique no botão **Generate release notes** para gerar o change
 
 Gerado o release notes, clique em **Publish Release**. Isso ira gerar uma versão candidata.
 
-Faça os testes necessários, utilize no composer o número da versão candidate para os testes. Rode o comando ``composer install`` para atualizar a lib
+Faça os testes necessários, utilize no composer o número da versão candidate para os testes. Rode o comando ``composer update om30/esus-toolkit`` para atualizar a lib
 
 ![choose-version-compose.png](assets/choose-version-composer-rc.png)
 
@@ -53,6 +53,6 @@ Logo em seguida, clique no botão para gerar o changelog.
 
 Gerado o release notes, basta clica em Publish Release. Isso irá gerar a versão final.
 Com a versão final publicada, basta apontá-la no arquivo composer.json do projeto que queira utilizar e rodar o comando
-``composer install`` para atualizar a lib no projeto.
+``composer update om30/esus-toolkit`` para atualizar a lib no projeto.
 
 ![choose-version-composer.png](assets/choose-version-composer.png)
