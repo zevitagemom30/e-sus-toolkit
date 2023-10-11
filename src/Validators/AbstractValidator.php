@@ -50,6 +50,12 @@ abstract class AbstractValidator
         return (!$this->hasErrors());
     }
 
+    public function reset()
+    {
+        $this->errors = [];
+        $this->data = [];
+    }
+
     protected function addError(string $key, array $data = [])
     {
         $this->errors[] = vsprintf($this->messages[$key], $data);
