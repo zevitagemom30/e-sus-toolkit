@@ -2,11 +2,17 @@
 
 namespace OM30\EsusToolkit\Validators;
 
+use Illuminate\Support\Facades\Validator;
+use OM30\EsusToolkit\Exceptions\ValidatorException;
+
 abstract class AbstractValidator
 {
     private array $data;
+
     private string $method;
+
     protected array $errors = [];
+
     protected array $messages = [
         'id_invalid' => 'O ID é inválido',
         'row_not_found' => 'O registro não foi encontrado',
@@ -25,7 +31,7 @@ abstract class AbstractValidator
 
     public function hasErrors(): bool
     {
-        return (!empty($this->getErrors()));
+        return !empty($this->getErrors());
     }
 
     public function getMethod(): string
@@ -38,16 +44,16 @@ abstract class AbstractValidator
         return $this->data;
     }
 
-    public function validate(string $method)
+    public function validate(string $method): bool
     {
         if (!method_exists($this, $method)) {
-            return null;
+            return false;
         }
 
         $this->setMethod($method);
         $this->{$method}();
 
-        return (!$this->hasErrors());
+        return !$this->hasErrors();
     }
 
     public function reset()
@@ -64,5 +70,14 @@ abstract class AbstractValidator
     protected function setMethod(string $method)
     {
         $this->method = $method;
+    }
+
+    protected function validateData(array $rules, array $messages = []): void
+    {
+        $validator = Validator::make($this->getData(), $rules, $messages);
+        if ($validator->fails()) {
+            $this->errors = $validator->errors()->toArray();
+            throw ValidatorException::withErrors($this->errors);
+        }
     }
 }
