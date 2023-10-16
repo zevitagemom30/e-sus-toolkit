@@ -18,12 +18,10 @@ trait AvailabilityWithDependencie
 
     public function setDependencies(array $data)
     {
-
         foreach ($data as $key => $value) {
 
             $this->dependencies[$key] = $value;
 
         }
-
     }
 }
