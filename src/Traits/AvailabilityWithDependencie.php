@@ -15,4 +15,15 @@ trait AvailabilityWithDependencie
     {
         return (isset($this->dependencies[$key])) ? $this->dependencies[$key] : null;
     }
+
+    public function setDependencies(array $data)
+    {
+
+        foreach ($data as $key => $value) {
+
+            $this->dependencies[$key] = $value;
+
+        }
+
+    }
 }
