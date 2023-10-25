@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Helpers;
+namespace OM30\EsusToolkit\Helpers;
 
 class DocumentHelper
 {
