@@ -55,11 +55,45 @@ class DateTimeHelper
         }, $data);
     }
 
+    /**
+     * Adiciona as colunas created_at e updated_at no array de dados que nao possui, evitando
+     * assim dar problema na hora de inserir os dados no banco de dados
+     *
+     * @param array $data
+     * @param string $createdAt
+     * @param string $updatedAt
+     * @return array
+     */
     public static function addTimestampColumnsSoft(array $data, string $createdAt, string $updatedAt): array
     {
         return array_merge($data, [
             $createdAt => now(),
             $updatedAt => now()
         ]);
+    }
+
+    /**
+     * Calcula quantidade de meses entre duas datas
+     * Caso parâmetro final for nulo, utilizará a data atual
+     *
+     * @param string $dateInit
+     * @param string $dateFinish
+     * @return array
+     */
+    public static function calcDiffMonths(string $dateInit, string $dateFinish = null) : int
+    {
+        $dateInit   = new \DateTime($dateInit);
+        $dateFinish = null;
+        if ($dateFinish === null)
+            $dateFinish = new \DateTime();
+        else $dateFinish = new \DateTime($dateFinish);
+
+        $interval = $dateInit->diff($dateFinish);
+
+        $months = (int)$interval->format('%m');
+        $years  = (int)$interval->format('%y');
+        if ($years > 0)
+            $months += ($years * 12);
+        return $months;
     }
 }
