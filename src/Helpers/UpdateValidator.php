@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Helpers;
+namespace OM30\EsusToolkit\Helpers;
 
 use Illuminate\Support\Facades\Http;
 
